@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.itecknologi.iteckapp">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconn"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/iconn"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup"
+        tools:targetApi="31">
+        <activity
+            android:name=".VoiceCallActivity"
+            android:exported="true">
+
+
+        </activity>
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.MessageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
+        <activity
+            android:name=".FrequentLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Test"
+            android:exported="false" /> <!-- <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /> -->
+        <!--<<<<<<< HEAD-->
+        <!--        &lt;!&ndash; OUR API KEY &ndash;&gt;-->
+        <!--        &lt;!&ndash; <meta-data &ndash;&gt;-->
+        <!--        &lt;!&ndash; android:name="com.google.android.geo.API_KEY" &ndash;&gt;-->
+        <!--        &lt;!&ndash; android:value="AIzaSyAgWwDLV_nImXE8fX5maOSdQFJ9F8eWKd8" /> &lt;!&ndash; //AIzaSyC-GpKPpjKh2ZVtEWyUPcUO64kfX4ZuEIM &ndash;&gt; &ndash;&gt;-->
+        <!--=======-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAgWwDLV_nImXE8fX5maOSdQFJ9F8eWKd8" /> <!-- //AIzaSyC-GpKPpjKh2ZVtEWyUPcUO64kfX4ZuEIM -->
+
+        <service
+            android:name=".PushNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".mapref"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParentFuel"
+            android:exported="false" />
+        <activity
+            android:name=".ParentAmount"
+            android:exported="false" />
+        <activity
+            android:name=".ParentMileage"
+            android:exported="false" />
+        <activity
+            android:name=".ParentTrips"
+            android:exported="false" />
+        <activity
+            android:name=".currentlocation"
+            android:exported="false" />
+        <activity
+            android:name=".otp_check"
+            android:exported="false" />
+        <activity
+            android:name=".login_one"
+            android:exported="false" />
+        <activity
+            android:name=".TripDetailActivity"
+            android:exported="true"
+            android:label="TripDetailActivity" />
+        <activity
+            android:name=".splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

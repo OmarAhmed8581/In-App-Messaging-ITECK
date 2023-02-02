@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:padding="16dp"
+    android:background="@color/transparent">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:visibility="invisible"
+        android:id="@+id/iv_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/img_avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
+
+
+    <!--    <com.airbnb.lottie.LottieAnimationView-->
+    <!--        android:id="@+id/btn_end_call"-->
+    <!--        android:layout_width="80dp"-->
+    <!--        android:layout_height="80dp"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginTop="156dp"-->
+    <!--        android:rotation="90"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.199"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/iv_user"-->
+    <!--        app:lottie_autoPlay="true"-->
+    <!--        app:lottie_loop="true"-->
+    <!--        app:lottie_rawRes="@raw/reject_call" />-->
+
+    <TextView
+        android:id="@+id/tv_call_msg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:gravity="center"
+        android:text="Agent is calling"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user" />
+
+    <ImageButton
+        android:id="@+id/btn_reject"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="452dp"
+        android:background="@drawable/full_rounded"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/ic_baseline_call_end_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/btn_msg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:layout_marginTop="176dp"
+        android:background="@drawable/full_rounded"
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/ic_baseline_message_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/btn_accept"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="452dp"
+        android:background="@drawable/full_rounded"
+        android:backgroundTint="@color/success_green"
+        android:src="@drawable/ic_baseline_call_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user"
+        app:tint="@color/white" />
+
+    <!--    <com.airbnb.lottie.LottieAnimationView-->
+    <!--        android:id="@+id/btn_accept_call"-->
+    <!--        android:layout_width="80dp"-->
+    <!--        android:layout_height="80dp"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginTop="156dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.803"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/iv_user"-->
+    <!--        app:lottie_autoPlay="true"-->
+    <!--        app:lottie_loop="true"-->
+    <!--        app:lottie_rawRes="@raw/accept_call" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

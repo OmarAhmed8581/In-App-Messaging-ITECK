@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "139354921581",
+    "project_id": "iteckapp",
+    "storage_bucket": "iteckapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139354921581:android:5cbc3fa52ea8575536fd64",
+        "android_client_info": {
+          "package_name": "com.itecknologi.iteckapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139354921581-uv5jdecdeic4p37siv416h7g01abo3nn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7w9F7atgi4zgkWQwD6TPrVx4RV_uldE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139354921581-uv5jdecdeic4p37siv416h7g01abo3nn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

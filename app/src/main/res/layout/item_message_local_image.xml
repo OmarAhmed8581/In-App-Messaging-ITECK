@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!--    <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--        android:id="@+id/iv_user"-->
+    <!--        android:layout_width="48dp"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:src="@drawable/img_avatar"-->
+    <!--        app:shapeAppearance="@drawable/round_outline" />-->
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/full_rounded"
+        android:backgroundTint="@color/blue"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_user_initials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="JJ"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/message_bg"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_placeholder" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/tv_created_date"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="123"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

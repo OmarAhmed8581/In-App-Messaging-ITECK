@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context="com.itecknologi.iteckapp.otp_check">
+
+    <VideoView
+        android:id="@+id/videoView7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="277dp"
+        android:layout_height="172dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputEditTextotp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wee" />
+
+    <TextView
+        android:id="@+id/txtToday"
+        android:layout_width="254dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/sarpanch"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewotpnotify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditTextotp"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/tvround"
+        android:drawableLeft="@drawable/otp"
+        android:drawablePadding="10dp"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        android:singleLine="false"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedbutton"
+        android:text="Verify"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:layout_margin="32dp"
+        app:layout_constraintCircleRadius="@dimen/cardview_default_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditTextotp" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expires in:"
+        android:textColor="#00ff00"
+        android:layout_margin="8dp"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputEditTextotp"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditTextotp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:soundEffectsEnabled="true"
+        android:text="Resend OTP."
+        android:textColor="#FFFF00"
+        android:textSize="11dp"
+        android:layout_margin="8dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditTextotp"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditTextotp" />
+
+    <TextView
+        android:id="@+id/textViewotpnotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="OTP sent on:"
+        android:textColor="#fff"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputEditTextotp"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditTextotp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

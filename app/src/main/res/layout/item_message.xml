@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="end"
+    android:padding="8dp">
+
+    <!--    <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--        android:id="@+id/iv_user"-->
+    <!--        android:layout_width="48dp"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:src="@drawable/img_avatar"-->
+    <!--        app:shapeAppearance="@drawable/round_outline" />-->
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/message_bg"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello world"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/iv_image"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_placeholder" />
+
+
+        <TextView
+            android:id="@+id/tv_created_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp"
+            android:text="123"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/full_rounded"
+        android:backgroundTint="@color/blue"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_user_initials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="JJ"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

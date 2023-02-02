@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/full_call_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:background="@color/color_call_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:id="@+id/relative_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white">
+
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+
+            <ImageButton
+                android:id="@+id/btn_call"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/call_icon"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_wifi_strength"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:elevation="16dp"
+                android:src="@drawable/wific" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="#0169B6"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp"
+            android:text="Connecting..."
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:elevation="16dp"
+                android:src="@drawable/logo"
+                app:civ_circle_background_color="@color/white" />
+
+            <!--            <com.airbnb.lottie.LottieAnimationView-->
+            <!--                android:id="@+id/progress"-->
+            <!--                android:layout_width="220dp"-->
+            <!--                android:layout_height="220dp"-->
+            <!--                android:layout_centerInParent="true"-->
+            <!--                app:lottie_autoPlay="true"-->
+            <!--                app:lottie_loop="true"-->
+            <!--                app:lottie_rawRes="@raw/blinker" />-->
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#B0000000"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <ImageButton
+                    android:id="@+id/btn_call_end"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/full_rounded"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:src="@drawable/ic_baseline_call_end_24"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+
+                <ImageButton
+                    android:id="@+id/btn_toggle_speaker"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/full_rounded"
+                    android:backgroundTint="@color/color_call_bg"
+                    android:src="@drawable/speaker_white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+
+                <ImageButton
+                    android:id="@+id/btn_toggle_mic"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/full_rounded"
+                    android:backgroundTint="@color/color_call_bg"
+                    android:src="@drawable/ic_baseline_mic_24" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+
+                <ImageButton
+                    android:id="@+id/btn_message"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/full_rounded"
+                    android:backgroundTint="@color/color_call_bg"
+                    android:src="@drawable/ic_baseline_message_24"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mini_call_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B0000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/microphone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voice call"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_call_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_weight="1">-->
+
+
+        <!--            <ImageView-->
+        <!--                android:visibility="gone"-->
+        <!--                android:id="@+id/btn_open_call_screen"-->
+        <!--                android:layout_width="48dp"-->
+        <!--                android:layout_height="48dp"-->
+
+        <!--                android:layout_centerInParent="true"-->
+        <!--                android:backgroundTint="@color/color_call_bg"-->
+        <!--                android:src="@drawable/ic_baseline_arrow_drop_down_circle_24"-->
+        <!--                app:tint="@color/white" />-->
+
+        <!--        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+
+            <ImageButton
+                android:id="@+id/btn_toggle_speaker2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+
+                android:layout_centerInParent="true"
+                android:background="@drawable/full_rounded"
+                android:backgroundTint="@color/color_call_bg"
+                android:src="@drawable/ic_baseline_volume_off_24"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+
+            <ImageButton
+                android:id="@+id/btn_toggle_mic2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/full_rounded"
+                android:backgroundTint="@color/color_call_bg"
+                android:src="@drawable/ic_baseline_mic_24"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <ImageButton
+                android:id="@+id/btn_call_end2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/full_rounded"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:src="@drawable/ic_baseline_call_end_24"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

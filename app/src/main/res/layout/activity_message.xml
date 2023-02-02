@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat.MessageActivity">
+
+    <!--    android:name="com.itecknologi.iteckapp.CallDialogFragment"-->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="16dp"
+        android:tag="MyTag"
+
+        tools:layout="@layout/activity_voice_call" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_container_view"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:backgroundTint="@color/ui_blue"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@android:color/white">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                app:tint="@color/white"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Chat with Agent" />
+
+
+            <ImageButton
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:id="@+id/btn_call"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:tint="@color/white"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_call_24" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bg_call_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Tap to return to call"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <!--        <androidx.core.widget.NestedScrollView-->
+        <!--            android:id="@+id/nested_scroll"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="1">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--                android:backgroundTint="@color/light_gray"-->
+            <!--                android:background="@drawable/rounded_layout"-->
+
+            <TextView
+                android:id="@+id/tv_agent_joined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:text="Agent has joined the chat"
+
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:reverseLayout="true"
+                app:stackFromEnd="true"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_message" />
+
+        </LinearLayout>
+
+
+        <!--        </androidx.core.widget.NestedScrollView>-->
+        <TextView
+            android:id="@+id/waiting_for_agent"
+            android:layout_margin="16dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/ui_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting for the agent to connect." />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_bg"
+                    android:backgroundTint="#AEEAE7E7">
+
+                    <EditText
+                        android:id="@+id/et_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toStartOf="@+id/btn_attach"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter Message Here"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/txt_grey"
+                        android:textSize="14sp"
+                        app:backgroundTint="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/btn_attach"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:background="@color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_gallery" />
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnSend"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    app:fabCustomSize="40dp"
+                    app:maxImageSize="24dp"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#ff414d"
+                    android:enabled="false"
+                    android:outlineSpotShadowColor="@color/transparent"
+                    android:src="@drawable/ic_baseline_send_24"
+                    tools:targetApi="p" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+

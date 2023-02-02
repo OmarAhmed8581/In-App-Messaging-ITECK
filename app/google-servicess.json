@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "851121095888",
+    "project_id": "my-application-4fc0f",
+    "storage_bucket": "my-application-4fc0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851121095888:android:1b93102ffc9d56ec954ad5",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851121095888-cs5ac8visaeojp5vfc2j4ms8ue0efaj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0TfGasZv-Q-e3RyA_YXguHKZVE_hNyMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851121095888-cs5ac8visaeojp5vfc2j4ms8ue0efaj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851121095888:android:25ada4d8cf434684954ad5",
+        "android_client_info": {
+          "package_name": "com.itecknologi.iteckapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851121095888-cs5ac8visaeojp5vfc2j4ms8ue0efaj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0TfGasZv-Q-e3RyA_YXguHKZVE_hNyMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851121095888-cs5ac8visaeojp5vfc2j4ms8ue0efaj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
